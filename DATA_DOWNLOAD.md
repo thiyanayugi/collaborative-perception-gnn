@@ -32,7 +32,7 @@ unzip cpml_dataset.zip -d data/
 
 If you need immediate access to the dataset, please contact:
 
-- **Email**: your.email@example.com
+- **Email**: yugimariraj01@gmail.com
 - **GitHub**: [@thiyanayugi](https://github.com/thiyanayugi)
 
 ## Dataset Structure

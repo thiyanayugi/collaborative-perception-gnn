@@ -186,28 +186,6 @@ See [`data/README.md`](data/README.md) for detailed dataset documentation.
 
 ---
 
-## 🎯 Model Performance
-
-### GATv2 Model (Temporal Window = 3)
-
-| Metric    | Score |
-| --------- | ----- |
-| Accuracy  | 94.2% |
-| Precision | 92.8% |
-| Recall    | 93.5% |
-| F1-Score  | 93.1% |
-
-### ECC Model (Temporal Window = 3)
-
-| Metric    | Score |
-| --------- | ----- |
-| Accuracy  | 93.8% |
-| Precision | 91.9% |
-| Recall    | 92.7% |
-| F1-Score  | 92.3% |
-
----
-
 ## 📖 Documentation
 
 Comprehensive documentation is available in the [`docs/`](docs/) directory:
@@ -294,10 +272,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **Supervisor**: [Supervisor Name]
-- **Institution**: [University/Research Institution]
-- **Funding**: [Funding Source, if applicable]
-- **Dataset Collection**: Conducted at [Lab/Facility Name]
+- **Supervisor**: Irfan Fachruddin Priyanta M.Sc.
+- **Institution**: TU Dortmund
+- **Dataset Collection**: Conducted at FLW Hall, TU Dortmund
 
 ---
 
@@ -306,7 +283,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Thiyanayugi Mariraj**
 
 - GitHub: [@thiyanayugi](https://github.com/thiyanayugi)
-- Email: your.email@example.com
+- Email: yugimariraj01@gmail.com
 - Portfolio: [https://thiyanayugi.github.io](https://thiyanayugi.github.io)
 
 ---
