@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+
+# Data
+data/
+*.bag
+*.db3
+
+# Models
+models/checkpoints_*/
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+docs/
+
+# Tests
+tests/
+
+# Temporary files
+*.log
+*.tmp
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db

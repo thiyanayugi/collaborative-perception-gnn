@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyTorch
+*.pth
+*.pt
+checkpoints/
+runs/
+logs/
+
+# Data (5GB+ - excluded from Git, see DATA_DOWNLOAD.md)
+data/01_extracted/
+data/02_synchronized/
+data/03_transformed/
+data/04_cleaned/
+data/05_labelled/
+data/graph_frames/
+# Keep only the README
+!data/README.md
+
+# Models (keep configs, ignore large checkpoints)
+models/checkpoints_*/
+*.ckpt
+
+# Temporary files
+*.log
+*.tmp
+.cache/
+temp/
+tmp/
+
+# ROS
+rosbag/
+*.bag
+*.db3
+
+# System
+.Trash-*/
+Thumbs.db

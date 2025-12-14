@@ -1,0 +1,58 @@
+# Configuration for Standard GATv2 with Temporal Window 5
+
+# Data Configuration
+data:
+  data_dir: "/home/dartagnan-dev/ma_yugi/gnn_occupancy/data/08_gnn_splits_COLLABORATIVE/"
+  batch_size: 32
+  num_workers: 4
+  temporal_windows: [5]
+  augmentation:
+    rotation_angle: 15  # degrees (±15°)
+    scaling_range: [0.9, 1.1]  # 90-110%
+  binary_mapping:
+    occupied: [1, 2, 3, 4]  # Workstation, Robot, Boundary, KLT
+    unoccupied: [0]  # Unknown
+
+# Model Configuration
+model:
+  name: "OccupancyGNN"
+  input_dim: 16  # For collaborative perception with 16 features
+  hidden_dim: 64
+  output_dim: 1  # Binary classification
+  num_layers: 3
+  dropout: 0.2
+  gnn_type: "gatv2"  # Standard GATv2
+  attention_heads: 4
+  skip_connections: true
+  batch_norm: true
+  layer_norm: false
+  pooling: "mean_max"  # Mean + Max pooling
+
+# Training Configuration
+training:
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  lr_scheduler:
+    patience: 10
+    factor: 0.5
+    min_lr: 0.00001
+  early_stopping:
+    patience: 20
+    min_delta: 0.001
+  checkpoint_dir: "/home/dartagnan-dev/ma_yugi/gnn_occupancy/checkpoints_standard_gatv2_t5/"
+  device: "cpu"  # Options: "cuda", "cpu"
+  seed: 42
+
+# Evaluation Configuration
+evaluation:
+  metrics: ["accuracy", "precision", "recall", "f1", "roc_auc"]
+  visualization:
+    num_samples: 5
+    save_dir: "/home/dartagnan-dev/ma_yugi/gnn_occupancy/visualizations_standard_gatv2_t5/"
+
+# Ablation Studies
+ablation:
+  gnn_types: ["gatv2"]
+  temporal_windows: [5]
+  feature_importance: true

@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  cpml:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cpml:latest
+    container_name: cpml_container
+    
+    # Environment variables
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ROS_DOMAIN_ID=0
+    
+    # Volume mounts
+    volumes:
+      - ./data:/app/data:ro              # Mount data directory (read-only)
+      - ./models:/app/models             # Mount models directory
+      - ./configs:/app/configs           # Mount configs directory
+      - ./outputs:/app/outputs           # Mount outputs directory
+    
+    # Network mode
+    network_mode: host
+    
+    # Resource limits (adjust as needed)
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
+    
+    # GPU support (uncomment if using NVIDIA GPU)
+    # runtime: nvidia
+    # environment:
+    #   - NVIDIA_VISIBLE_DEVICES=all
+    
+    # Command to run
+    command: bash
+    
+    # Keep container running
+    stdin_open: true
+    tty: true
+
+# Optional: Add additional services (e.g., visualization server)
+# services:
+#   visualization:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - "8050:8050"
+#     command: python -m cpml.visualization.point_cloud_explorer
