@@ -94,12 +94,13 @@ class OptimizedECCConv(MessagePassing):
         # Initialize network parameters
         self._reset_parameters()
 
-    def _reset_parameters(self):
+    def _reset_parameters(self) -> None:
         """
         Initialize network parameters using appropriate initialization schemes.
 
         Uses Xavier/Glorot initialization for linear layers to ensure stable
         gradient flow during training of the collaborative perception model.
+        This initialization is particularly important for deep GNN architectures.
         """
         for layer in self.edge_network:
             if hasattr(layer, 'reset_parameters'):
