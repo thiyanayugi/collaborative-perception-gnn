@@ -120,7 +120,7 @@ class CollaborativePerceptionCoordinateTransformer:
             'robot_2_z': 'robot_2_local_z',
         }
         
-    def load_data(self, data_path=None):
+    def load_data(self, data_path: str = None) -> bool:
         """
         Load synchronized data from CSV file.
         
@@ -158,7 +158,7 @@ class CollaborativePerceptionCoordinateTransformer:
             print(f"Error loading data: {str(e)}")
             return False
             
-    def create_rotation_matrix(self, roll, pitch, yaw):
+    def create_rotation_matrix(self, roll: float, pitch: float, yaw: float) -> np.ndarray:
         """
         Create a 3x3 rotation matrix from roll, pitch, and yaw angles.
         
@@ -187,7 +187,7 @@ class CollaborativePerceptionCoordinateTransformer:
         
         return R
         
-    def create_2d_rotation_matrix(self, yaw):
+    def create_2d_rotation_matrix(self, yaw: float) -> np.ndarray:
         """
         Create a 2x2 rotation matrix from yaw angle.
         
