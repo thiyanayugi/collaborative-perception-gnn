@@ -67,7 +67,8 @@ def create_collaborative_perception_dataset_splits(
     logger.info("Creating collaborative perception dataset splits")
     logger.info(f"Split ratios - Train: {train_ratio}, Val: {validation_ratio}, Test: {test_ratio}")
 
-    # Validate split ratios
+    # Validate split ratios to ensure they sum to exactly 1.0
+    # This prevents data leakage and ensures complete dataset coverage
     if abs(train_ratio + validation_ratio + test_ratio - 1.0) > 1e-6:
         logger.error("Split ratios must sum to 1.0")
         return False
