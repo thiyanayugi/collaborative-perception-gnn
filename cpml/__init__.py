@@ -1,25 +1,20 @@
 """
-Collaborative Perception Management Layer (CPML)
+Collaborative Perception Management Layer (CPML).
 
-A comprehensive framework for collaborative perception in warehouse robotics 
-using Graph Neural Networks (GNNs) and multi-robot sensor fusion.
+A comprehensive framework for multi-robot collaborative perception using
+Graph Neural Networks in warehouse environments.
 
-Author: Thiyanayugi Mariraj
-Version: 1.0.0
-License: MIT
+Modules:
+    - preprocessing: Data preprocessing pipeline for multi-robot sensor data
+    - training: GNN model training and evaluation
+    - visualization: Interactive visualization tools
 """
 
-__version__ = "1.0.0"
-__author__ = "Thiyanayugi Mariraj"
-__email__ = "your.email@example.com"  # Update with your email
+__version__ = '1.0.0'
+__author__ = 'Thiyanayugi Mariraj'
+__email__ = 'yugimariraj01@gmail.com'
 
-# Import main modules for easy access
+# Package-level imports for convenience
 from cpml import preprocessing, training, visualization
 
-__all__ = [
-    "preprocessing",
-    "training", 
-    "visualization",
-    "__version__",
-    "__author__",
-]
+__all__ = ['preprocessing', 'training', 'visualization']
