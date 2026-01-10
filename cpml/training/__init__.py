@@ -1,12 +1,8 @@
 """
-CPML Training Module
+Training module for GNN-based collaborative perception models.
 
-Graph Neural Network training pipeline including:
-- Model architectures (GATv2, ECC)
-- Training loops and optimization
-- Evaluation metrics
-- Data loading utilities
-- Ablation studies
+This module contains model architectures, training pipelines, evaluation tools,
+and utilities for training Graph Neural Networks on collaborative perception data.
 """
 
 from cpml.training import (
@@ -15,16 +11,16 @@ from cpml.training import (
     evaluate,
     data_loader,
     utils,
-    ablation,
     class_weights,
+    ablation
 )
 
 __all__ = [
-    "model",
-    "train",
-    "evaluate",
-    "data_loader",
-    "utils",
-    "ablation",
-    "class_weights",
+    'model',
+    'train',
+    'evaluate',
+    'data_loader',
+    'utils',
+    'class_weights',
+    'ablation'
 ]
