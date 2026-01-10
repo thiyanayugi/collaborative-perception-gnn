@@ -1,32 +1,28 @@
 """
-CPML Preprocessing Module
+Preprocessing module for collaborative perception data pipeline.
 
-Data preprocessing pipeline for collaborative perception including:
-- Radar and Vicon data extraction
-- Multi-robot synchronization
-- Coordinate transformations
-- Point cloud cleaning and labeling
-- Graph conversion for GNN training
+This module contains all components for preprocessing multi-robot sensor data,
+including extraction, synchronization, transformation, cleaning, and labeling.
 """
 
 from cpml.preprocessing import (
-    radar_extraction,
-    vicon_extraction,
-    synchronization,
     coordinate_transform,
+    frame_splitter,
+    graph_converter,
     point_cloud_cleaner,
     point_cloud_labeler,
-    graph_converter,
-    frame_splitter,
+    radar_extraction,
+    synchronization,
+    vicon_extraction
 )
 
 __all__ = [
-    "radar_extraction",
-    "vicon_extraction",
-    "synchronization",
-    "coordinate_transform",
-    "point_cloud_cleaner",
-    "point_cloud_labeler",
-    "graph_converter",
-    "frame_splitter",
+    'coordinate_transform',
+    'frame_splitter',
+    'graph_converter',
+    'point_cloud_cleaner',
+    'point_cloud_labeler',
+    'radar_extraction',
+    'synchronization',
+    'vicon_extraction'
 ]
