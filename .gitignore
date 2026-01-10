@@ -16,14 +16,12 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# Virtual Environments
+# Virtual environments
 venv/
 ENV/
 env/
@@ -41,39 +39,30 @@ env/
 .ipynb_checkpoints
 *.ipynb
 
-# PyTorch
-*.pth
-*.pt
-checkpoints/
-runs/
-logs/
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
 
-# Data (5GB+ - excluded from Git, see DATA_DOWNLOAD.md)
-data/01_extracted/
-data/02_synchronized/
-data/03_transformed/
-data/04_cleaned/
-data/05_labelled/
-data/graph_frames/
-# Keep only the README
+# Model checkpoints and data
+models/*.pt
+models/*.pth
+*.ckpt
+data/*/
 !data/README.md
 
-# Models (keep configs, ignore large checkpoints)
-models/checkpoints_*/
-*.ckpt
+# Logs
+*.log
+logs/
+wandb/
 
 # Temporary files
-*.log
 *.tmp
+*.bak
 .cache/
-temp/
-tmp/
 
-# ROS
-rosbag/
-*.bag
-*.db3
-
-# System
-.Trash-*/
+# OS
 Thumbs.db
+.DS_Store
