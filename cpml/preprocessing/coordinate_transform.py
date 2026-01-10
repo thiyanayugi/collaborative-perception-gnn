@@ -53,7 +53,7 @@ class CollaborativePerceptionCoordinateTransformer:
     - Support for multiple robot configurations
     """
 
-    def __init__(self, synchronized_data_path=None):
+    def __init__(self, synchronized_data_path: str = None) -> None:
         """
         Initialize the coordinate transformer for collaborative perception.
 
