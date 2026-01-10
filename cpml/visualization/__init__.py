@@ -1,25 +1,22 @@
 """
-CPML Visualization Module
+Visualization module for collaborative perception data.
 
-Interactive visualization tools for:
-- Point cloud exploration
-- Vicon motion capture data
-- Global warehouse maps
-- Robot trajectories
+This module provides interactive visualization tools for point clouds,
+trajectories, and multi-robot collaborative perception data.
 """
 
 from cpml.visualization import (
-    point_cloud_explorer,
-    vicon_explorer,
     global_map,
+    point_cloud_explorer,
     robot_pointcloud,
     trajectory_generator,
+    vicon_explorer
 )
 
 __all__ = [
-    "point_cloud_explorer",
-    "vicon_explorer",
-    "global_map",
-    "robot_pointcloud",
-    "trajectory_generator",
+    'global_map',
+    'point_cloud_explorer',
+    'robot_pointcloud',
+    'trajectory_generator',
+    'vicon_explorer'
 ]
