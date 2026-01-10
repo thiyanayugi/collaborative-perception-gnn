@@ -81,8 +81,7 @@ def create_collaborative_gnn_frame(dataframe, timestamp, voxel_size_meters=0.1):
     if robot1_x_columns and robot1_y_columns and robot1_z_columns:
         # Extract spatial coordinates for Robot 1
         robot1_positions = dataframe[[robot1_x_columns[0], robot1_y_columns[0], robot1_z_columns[0]]].values
-        # Filter out invalid/NaN measurements
-        # Filter out invalid measurements (NaN values)
+        # Filter out invalid measurements (NaN values) to ensure data quality
         robot1_valid_mask = ~np.isnan(robot1_positions).any(axis=1)
         robot1_positions = robot1_positions[robot1_valid_mask]
 
