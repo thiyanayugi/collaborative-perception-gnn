@@ -29,7 +29,7 @@ class WeightedBCELoss(torch.nn.Module):
     Based on raw CSV data analysis: 61.8% occupied, 38.2% unoccupied.
     Gives higher weight to minority class (unoccupied).
     """
-    def __init__(self, weight_unoccupied=0.618, weight_occupied=0.382):
+    def __init__(self, weight_unoccupied: float = 0.618, weight_occupied: float = 0.382) -> None:
         super().__init__()
         # Minority class (unoccupied) gets higher weight
         self.weight_unoccupied = weight_unoccupied
@@ -40,7 +40,7 @@ class WeightedBCELoss(torch.nn.Module):
         print(f"  Unoccupied weight (minority): {self.weight_unoccupied}")
         print(f"  Occupied weight (majority): {self.weight_occupied}")
 
-    def forward(self, predictions, targets):
+    def forward(self, predictions: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
         bce_loss = torch.nn.functional.binary_cross_entropy_with_logits(
             predictions, targets.float(), reduction='none'
         )
@@ -49,7 +49,7 @@ class WeightedBCELoss(torch.nn.Module):
         return (bce_loss * weights).mean()
 
 
-def calculate_class_weights(train_loader, device):
+def calculate_class_weights(train_loader: torch.utils.data.DataLoader, device: torch.device) -> torch.Tensor:
     """
     Calculate pos_weight for BCEWithLogitsLoss based on VOXEL-LEVEL class distribution.
 
