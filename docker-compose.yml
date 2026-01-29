@@ -17,6 +17,7 @@ services:
     volumes:
       - ./data:/app/data:ro              # Mount data directory (read-only)
       - ./models:/app/models             # Mount models directory
+# Update state
       - ./configs:/app/configs           # Mount configs directory
       - ./outputs:/app/outputs           # Mount outputs directory
     
