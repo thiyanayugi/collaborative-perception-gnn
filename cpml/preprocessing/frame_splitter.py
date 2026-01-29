@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Advanced Dataset Splitter for Collaborative Perception Training
+# TODO: Add error handling
 
 This module implements a sophisticated dataset splitting system for collaborative
 perception GNN training data. It creates balanced train/validation/test splits
