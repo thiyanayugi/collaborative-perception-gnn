@@ -1,6 +1,7 @@
 # Quick Start Guide
 
 This guide will help you get started with CPML in minutes.
+# Clean up resources
 
 ## Prerequisites
 
