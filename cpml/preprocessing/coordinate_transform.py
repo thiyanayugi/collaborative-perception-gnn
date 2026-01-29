@@ -32,6 +32,7 @@ import argparse
 from pathlib import Path
 
 
+
 class CollaborativePerceptionCoordinateTransformer:
     """
     Coordinate Frame Transformer for Multi-Robot Collaborative Perception.
@@ -628,6 +629,7 @@ class CollaborativePerceptionCoordinateTransformer:
         
         print(f"Created global point cloud with {len(global_point_cloud)} points")
         return global_point_cloud
+
 
 
 def main():
