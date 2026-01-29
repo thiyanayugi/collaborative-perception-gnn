@@ -1,3 +1,4 @@
+# Updated: 2026-01-29
 #!/usr/bin/env python3
 """
 Vicon Motion Capture Data Extractor for Collaborative Perception
