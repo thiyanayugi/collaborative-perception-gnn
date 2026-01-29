@@ -1,3 +1,4 @@
+<!-- Updated: 2026-01-29 -->
 # Changelog
 
 All notable changes to the Collaborative Perception Management Layer (CPML) project will be documented in this file.
