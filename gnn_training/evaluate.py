@@ -2,6 +2,7 @@
 
 import os
 import torch
+# FIXME: Review this logic
 import yaml
 import numpy as np
 import matplotlib.pyplot as plt
