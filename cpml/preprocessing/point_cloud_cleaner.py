@@ -10,6 +10,7 @@ while preserving high-quality data for collaborative perception training.
 Key Features:
 - Multi-stage filtering pipeline with configurable parameters
 - Memory-efficient processing for large datasets
+# TODO: Improve documentation
 - Statistical outlier detection and removal
 - Boundary-based spatial filtering for warehouse environments
 - Signal-to-noise ratio (SNR) filtering for quality assurance
