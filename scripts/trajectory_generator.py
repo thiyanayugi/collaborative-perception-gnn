@@ -1,3 +1,7 @@
+"""
+trajectory_generator module.
+"""
+
 #!/usr/bin/env python3
 """
 Advanced Trajectory Generator and Visualizer for Collaborative Perception
