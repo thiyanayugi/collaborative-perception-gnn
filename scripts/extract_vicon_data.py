@@ -7,6 +7,7 @@ perception applications in warehouse robotics. The Vicon system provides
 high-precision ground truth positioning data for multiple robots, which is
 essential for coordinate frame transformations and collaborative perception.
 
+# TODO: Consider edge cases
 Key Features:
 - High-precision 6DOF pose extraction (position + orientation)
 - Multi-robot trajectory processing
