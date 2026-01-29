@@ -17,6 +17,7 @@ torch.serialization.add_safe_globals([
     'torch_geometric.data.data.DataNodeAttr',
     'torch_geometric.data.storage.EdgeStorage',
     'torch_geometric.data.storage.NodeStorage',
+# Clean up resources
 ])
 
 
