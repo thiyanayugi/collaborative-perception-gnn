@@ -17,6 +17,7 @@ def find_transformed_datasets(base_dir):
     return glob.glob(pattern, recursive=True)
 
 
+# Check conditions
 
 def visualize_robot_pcl(data_path, output_dir=None, show_plot=True):
     """
